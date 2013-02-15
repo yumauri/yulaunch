@@ -4,7 +4,7 @@
 
 You can use following command line parameters (in Opera there is special field for them, you can use it).
 
- -d | --debug → turns on debug mode, and will output debug messages (on Windows with message box, in Linux – to stdout)
+ -d | --debug → turns on debug mode, and will output debug messages (on Windows with message box, on Linux – to stdout)
 
  -s → defines delimeter, same as "spacer" property in configuration file
 
