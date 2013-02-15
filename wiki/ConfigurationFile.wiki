@@ -1,0 +1,40 @@
+#summary Configuration file description
+
+By default, configuration file are looked up near to binary yulaunch. And, if it cannot be found ­there – it will be looked up inside default setting path for your operation system (by default, it is _C:\Documents and Settings\user\Local Settings\Application Data\yulaunch\yulaunch.cfg_ for Windows, and _/home/user/.config/yulaunch.cfg_ for Linux).
+
+= Introduction =
+
+Configuration file by format ­- it is a simple INI file. It has sections ­- one section for one protocol. Minimally required property is "command" for each section.
+{{{
+[ssh]
+command = putty.exe "%1"
+
+[telnet]
+command = putty.exe "%1"
+}}}
+
+= Details =
+
+You can specify a little more properties for protocol, here they are:
+
+=== spacer ===
+If you program requires more than one parameter, you can use separator in the link, for example, if you need port in addition to server address, you can setup protocol as
+{{{
+[ssh]
+command = putty.exe -P %2 "%1"
+spacer = |
+}}}
+and use link ssh://127.0.0.1|2202
+
+As you can see, you can use %1, %2 etc to access to the parts, separated by delimeter. Also, you can use variable names
+{{{
+[ssh]
+command = putty.exe -P %port "%1"
+spacer = |
+}}}
+and use link ssh://127.0.0.1|port=2202
+
+In last example variables will be:<br>
+ %1 → 127.0.0.1<br>
+ %2 → port=2202<br>
+ %port → 2202
