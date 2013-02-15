@@ -61,3 +61,17 @@ Tool will check, if there is %port variable inside link → then instead of defa
 You can define complicated term using boolean operators & (and), | (or), ! (not).
 
 <u>Note!</u> Term should be in [http://en.wikipedia.org/wiki/Reverse_Polish_notation reverse polish notation].<br> For example, if you want check two variables by logical condition *%var1 & %var2*, you should write *%var1 %var2 &*
+
+Term will be parsed until it meet first @command with "true" result.
+
+Complicated example
+{{{
+cond = %vds @sshv %pass @ispds %login %vds ! & %name | @tstcomm
+}}}
+It means: if there is %vds variable → returns command @sshv, then, if there is variable %pass → returns command @ispds, then, if there is variable %login, but there isn't variable %vds, or there is variable %name → returns command @tstcomm.
+
+This condition in normal notation looks like:
+{{{
+cond = %vds ? @sshv : (%pass ? @ispds : ((%login & !%vds) | %name ? @tstcomm : @command))
+}}}
+(you cannot write this, it is just explanation)
