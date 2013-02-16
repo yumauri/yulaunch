@@ -4,13 +4,13 @@ By default, configuration file are looked up near to binary yulaunch. And, if it
 
 = Introduction =
 
-Configuration file by format ­- it is a simple INI file. It has sections ­- one section for one protocol. Minimally required property is "command" for each section.
+Configuration file by format ­- it is a simple INI file. It has sections ­- one section per one protocol. Minimally required property is "command" for each section.
 {{{
 [ssh]
 command = putty.exe "%1"
 
 [telnet]
-command = putty.exe "%1"
+command = putty.exe -telnet "%1"
 }}}
 
 = Details =
