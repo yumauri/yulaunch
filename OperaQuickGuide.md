@@ -1,0 +1,28 @@
+For example, you want to start Putty when you click on ssh:// link:
+
+## Opera setup ##
+
+1. Open Opera settings (Ctrl+F12)
+
+2. Go to "Advanced" tab, and "Programs" view
+
+![http://yulaunch.googlecode.com/files/screenshot2.png](http://yulaunch.googlecode.com/files/screenshot2.png)
+
+3. Add new "ssh" protocol and choose tool as application to open it
+
+![http://yulaunch.googlecode.com/files/screenshot3.png](http://yulaunch.googlecode.com/files/screenshot3.png)
+
+## yulaunch setup ##
+
+By default, configuration file are looked up near to binary yulaunch. And, if it cannot be found ­there – it will be looked up inside default setting path for your operation system (by default, it is _C:\Documents and Settings\user\Local Settings\Application Data\yulaunch\yulaunch.cfg_ for Windows, and _/home/user/.config/yulaunch.cfg_ for Linux).
+
+Put `[ssh]` section inside configuration file, and point 'command' line to your Putty instance:
+```
+[ssh]
+command = putty.exe "%1"
+```
+Instead of "%1" there will be placed your link, without "ssh://" prefix.
+
+## Thats all ##
+
+You can try to create page with link to ssh://your-server-name/ and click by.
