@@ -16,6 +16,6 @@ Or, in my case, I've written a couple of UserJS scripts to use with internal use
 
 # Documentation
 
-<a href='/yumauri/yulaunch/blob/wiki/OperaQuickGuide.md'>Opera quick guide</a><br/>
-<a href='/yumauri/yulaunch/blob/wiki/ConfigurationFile.md'>Configuration file description</a><br/>
-<a href='/yumauri/yulaunch/blob/wiki/ProgramDescription.md'>Program description</a>
+<a href='https://github.com/yumauri/yulaunch/blob/wiki/OperaQuickGuide.md'>Opera quick guide</a><br/>
+<a href='https://github.com/yumauri/yulaunch/blob/wiki/ConfigurationFile.md'>Configuration file description</a><br/>
+<a href='https://github.com/yumauri/yulaunch/blob/wiki/ProgramDescription.md'>Program description</a>
